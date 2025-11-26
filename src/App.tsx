@@ -20,8 +20,7 @@ import Spices from "./pages/Spices";
 import Honey from "./pages/Honey";
 import DateSyrup from "./pages/DateSyrup";
 import Juices from "./pages/Juices";
-// lazy-load OtherProducts
-const OtherProducts = lazy(() => import("./pages/OtherProducts"));
+
 
 const queryClient = new QueryClient();
 
@@ -45,11 +44,11 @@ const App = () => (
             <Route path="/dry-fruits" element={<DryFruits />} />
             <Route path="/spices" element={<Spices />} />
             <Route path="/honey" element={<Honey />} />
-            <Route path="/date-syrup" element={<DateSyrup />} />
+            <Route path="/datesyrup" element={<DateSyrup />} />
             <Route path="/juices" element={<Juices />} />
 
             {/* New route */}
-            <Route path="/other-products" element={<OtherProducts />} />
+            
 
             <Route path="*" element={<NotFound />} />
           </Routes>

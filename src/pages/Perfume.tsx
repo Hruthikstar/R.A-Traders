@@ -184,6 +184,10 @@ const perfumeProducts: PerfumeProduct[] = [
   { id: 150, name: "TIGER BALM LINIMENT", basePrice: 799, description: "28ml", image: "/images/perfume/tiger_balm_liniment_28ml.jpg" },
   { id: 151, name: "AXE BRAND", basePrice: 550, description: "56ml", image: "/images/perfume/axe_brand_56ml.jpg" },
   { id: 152, name: "AXE BRAND OIL", basePrice: 120, description: "3ml", image: "/images/perfume/axe_brand_oil_3ml.jpg" },
+{id: 153, name: "SAFRON 1G", basePrice: 499, description: "1G", image: "/images/perfume/safron1.jpg" },
+{id: 154, name: "SAFRON 4G", basePrice: 1599, description: "4G", image: "/images/perfume/safron4.jpg" },
+{id: 155, name: "SAFRON CLASSIC 1G", basePrice: 499, description: "1G", image: "/images/perfume/safron_c1.jpg" },
+{id: 156, name: "SAFRON CLASSIC 1G", basePrice: 699, description: "2G", image: "/images/perfume/safron_c2.jpg" },
 ];
 
 const features = [

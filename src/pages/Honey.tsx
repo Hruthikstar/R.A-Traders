@@ -23,6 +23,24 @@ const honeyProducts: Product[] = [
   { id: 7, name: "BGOOD WESTERN GHATS HONEY 120g", basePrice: 67, description: "Bgood Western Ghats heritage honey 120g", image: "/images/honey/bgood_western_ghats_120g.png" },
   { id: 8, name: "BGOOD WESTERN GHATS HONEY 50g", basePrice: 78, description: "Bgood Western Ghats heritage honey 50g", image: "/images/honey/bgood_western.jpg" },
   { id: 9, name: "ALSHIFA NATURAL FLORA HONEY 30g", basePrice: 366, description: "Alshifa natural flora honey 30g", image: "/images/honey/alshifa.jpg" },
+   { id: 10, name: "NESTLE NIDO", basePrice: 1949, description: "NESTLE NIDO", image: "/images/honey/milk_nido.jpg" },
+   { id: 11, name: "NESTLE NIDO", basePrice: 799, description: "NESTLE NDO", image: "/images/honey/milk_nido_4.jpg" },
+{ id: 12, name: "NESTLE MILO", basePrice: 549, description: "NESTLE MILO", image: "/images/honey/milo.jpg" },
+{ id: 13, name: "ANCHOR FORTIFIED FULL CREAM MILK POWDER", basePrice: 1250, description: "400g", image: "/images/honey/milk.jpg" },
+{ id: 14, name: "SAMYANG BULAK CHEESE HOT CHICKEN RAMEN", basePrice: 190, description: "105g", image: "/images/honey/samya_ramen.jpg" },
+{ id: 15, name: "SAMYANG BULDAK QUATTRO CHEESE HOT CHICKEN RAMEN", basePrice: 190, description: "110g", image: "/images/honey/samya_bulak.jpg" },
+{ id: 16, name: "SAMYANG KOREAN KIMCHI FLAVOUR RAMEN", basePrice: 110, description: "70g", image: "/images/honey/kimichi.jpg" },
+{ id: 17, name: "SAMYANG BLACK BULDAK HOT CHICKEN FLAVOUR RAMEN", basePrice: 130, description: "70g", image: "/images/honey/samyan_hot.jpg" },
+{ id: 18, name: "RS SPANISH OIL - MULTIPURPOSE OLIVE OIL", basePrice: 520, description: "175ML", image: "/images/honey/rs_oil.jpg" },
+{ id: 19, name: "RS SPANISH OIL - MULTIPURPOSE OLIVE OIL", basePrice: 699, description: "200ML", image: "/images/honey/rs_oil_1.jpg" },
+{ id: 20, name: "FIGARO SPANISH BRAND MULTIPURPOSE OLIVE OIL", basePrice: 399, description: "200ML", image: "/images/honey/figaro_spanish.jpg" },
+{ id: 21, name: "FIGARO SPANISH BRAND MULTIPURPOSE OLIVE OIL", basePrice: 939, description: "500ML", image: "/images/honey/figaro_1.jpg" },
+{ id: 22, name: "FIGARO PLAIN GREEN OLIVES", basePrice: 340, description: "450G", image: "/images/honey/figaro_plain_green.jpg" },
+{ id: 23, name: "FIGARO PLAIN BLACK OLIVES", basePrice: 340, description: "450G", image: "/images/honey/figaro_plain_black.jpg" },
+
+
+
+
 ];
 
 const features = [
