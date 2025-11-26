@@ -7,226 +7,24 @@ import Footer from "@/components/Footer";
 
 const ToysShowcase = () => {
   const toysProducts = [
-    { 
-      id: 1, 
-      name: "Educational Blocks", 
-      price: 899, 
-      rating: 4.9,
-      reviews: 245,
-      description: "Learning blocks for early development",
-      badge: "Best Seller",
-      age: "3-8 years",
-      emoji: "🧸"
-    },
-    { 
-      id: 2, 
-      name: "Remote Car", 
-      price: 1299, 
-      rating: 4.8,
-      reviews: 198,
-      description: "High-speed remote control car",
-      age: "6+ years",
-      emoji: "🚗"
-    },
-    { 
-      id: 3, 
-      name: "Art Set", 
-      price: 749, 
-      rating: 4.7,
-      reviews: 156,
-      description: "Complete art and craft kit",
-      badge: "Premium",
-      age: "4+ years",
-      emoji: "🎨"
-    },
-    { 
-      id: 4, 
-      name: "Plush Elephant", 
-      price: 599, 
-      rating: 4.9,
-      reviews: 203,
-      description: "Soft and cuddly elephant toy",
-      age: "0+ years",
-      emoji: "🐘"
-    },
-    { 
-      id: 5, 
-      name: "Science Kit", 
-      price: 999, 
-      rating: 4.8,
-      reviews: 287,
-      description: "Fun experiments for kids",
-      badge: "Popular",
-      age: "8+ years",
-      emoji: "🔬"
-    },
-    { 
-      id: 6, 
-      name: "Board Game", 
-      price: 799, 
-      rating: 4.6,
-      reviews: 134,
-      description: "Family fun board game",
-      age: "6+ years",
-      emoji: "🎲"
-    },
-    { 
-      id: 7, 
-      name: "Building Set", 
-      price: 1499, 
-      rating: 4.7,
-      reviews: 98,
-      description: "Creative construction blocks",
-      badge: "New",
-      age: "5+ years",
-      emoji: "🏗️"
-    },
-    { 
-      id: 8, 
-      name: "Musical Piano", 
-      price: 899, 
-      rating: 4.8,
-      reviews: 167,
-      description: "Interactive musical toy",
-      age: "2+ years",
-      emoji: "🎹"
-    },
-    // Toys from PDF
-    { 
-      id: 9, 
-      name: "Dino Car Toys", 
-      price: 250, 
-      rating: 4.6,
-      reviews: 89,
-      description: "Fun dinosaur-themed toy cars",
-      age: "3+ years",
-      emoji: "🦕"
-    },
-    { 
-      id: 10, 
-      name: "Race Car Toy Candy", 
-      price: 215, 
-      rating: 4.5,
-      reviews: 112,
-      description: "Race car toy with candy surprise",
-      age: "4+ years",
-      emoji: "🏎️"
-    },
-    { 
-      id: 11, 
-      name: "Torpedo Water Gun Candy", 
-      price: 199, 
-      rating: 4.7,
-      reviews: 143,
-      description: "Water gun toy with candy (15g)",
-      age: "5+ years",
-      emoji: "💦"
-    },
-    { 
-      id: 12, 
-      name: "Bird Merry-Go-Round Candy Toys", 
-      price: 250, 
-      rating: 4.8,
-      reviews: 76,
-      description: "Rotating bird carousel toy with candy",
-      badge: "Fun",
-      age: "3+ years",
-      emoji: "🎠"
-    },
-    { 
-      id: 13, 
-      name: "Handheld Lightup Elephant Fan", 
-      price: 250, 
-      rating: 4.9,
-      reviews: 134,
-      description: "LED elephant fan with candy",
-      badge: "Popular",
-      age: "4+ years",
-      emoji: "🐘"
-    },
-    { 
-      id: 14, 
-      name: "Basketball Shooting Candy Toys", 
-      price: 250, 
-      rating: 4.6,
-      reviews: 98,
-      description: "Mini basketball game with candy",
-      age: "5+ years",
-      emoji: "🏀"
-    },
-    { 
-      id: 15, 
-      name: "Candy Blocks Candy Toys", 
-      price: 180, 
-      rating: 4.5,
-      reviews: 87,
-      description: "Building blocks candy toy (5g)",
-      age: "3+ years",
-      emoji: "🧱"
-    },
-    { 
-      id: 16, 
-      name: "Candy Dispenser Toys", 
-      price: 250, 
-      rating: 4.7,
-      reviews: 156,
-      description: "Fun candy dispenser toy (20g)",
-      age: "4+ years",
-      emoji: "🍬"
-    },
-    { 
-      id: 17, 
-      name: "Funbrella Umbrella Candy Toys", 
-      price: 10, 
-      rating: 4.4,
-      reviews: 203,
-      description: "Mini umbrella toy with candy",
-      age: "3+ years",
-      emoji: "☂️"
-    },
-    { 
-      id: 18, 
-      name: "Fantasy Fairy Princess Candy", 
-      price: 10, 
-      rating: 4.6,
-      reviews: 189,
-      description: "Princess-themed candy toy",
-      age: "3+ years",
-      emoji: "👸"
-    },
-    { 
-      id: 19, 
-      name: "Torpedo Egg Pop", 
-      price: 140, 
-      rating: 4.5,
-      reviews: 112,
-      description: "Egg-shaped pop candy toy",
-      age: "4+ years",
-      emoji: "🥚"
-    },
-    { 
-      id: 20, 
-      name: "Cricket Ball Candy Toys", 
-      price: 20, 
-      rating: 4.3,
-      reviews: 67,
-      description: "Cricket ball toy with candy",
-      age: "5+ years",
-      emoji: "🏏"
-    },
-    { 
-      id: 21, 
-      name: "Turbo Ventilator Mini Candy", 
-      price: 250, 
-      rating: 4.7,
-      reviews: 145,
-      description: "Mini fan toy with candy (5g)",
-      age: "4+ years",
-      emoji: "🌀"
-    },
+    
+    // Toys from PDF (kept their original image paths where available)
+    { id: 9, name: "Dino Car Toys", price: 250, rating: 4.6, reviews: 89, description: "Fun dinosaur-themed toy cars", age: "3+ years", image: "/images/toys/dino_toy.jpg" },
+    { id: 10, name: "Race Car Toy Candy", price: 215, rating: 4.5, reviews: 112, description: "Race car toy with candy surprise", age: "4+ years", image: "/images/toys/race_car.jpg" },
+    { id: 11, name: "Torpedo Water Gun Candy", price: 199, rating: 4.7, reviews: 143, description: "Water gun toy with candy (15g)", age: "5+ years", image: "/images/toys/torpedo_water_gun.jpg" },
+    { id: 12, name: "Bird Merry-Go-Round Candy Toys", price: 250, rating: 4.8, reviews: 76, description: "Rotating bird carousel toy with candy", badge: "Fun", age: "3+ years", image: "/images/toys/bird_merry.jpg" },
+    { id: 13, name: "Handheld Lightup Elephant Fan", price: 250, rating: 4.9, reviews: 134, description: "LED elephant fan with candy", badge: "Popular", age: "4+ years", image: "/images/toys/elephant_fan.jpg" },
+    { id: 14, name: "Basketball Shooting Candy Toys", price: 250, rating: 4.6, reviews: 98, description: "Mini basketball game with candy", age: "5+ years", image: "/images/toys/basketball_candy.jpg" },
+    { id: 15, name: "Candy Blocks Candy Toys", price: 180, rating: 4.5, reviews: 87, description: "Building blocks candy toy (5g)", age: "3+ years", image: "/images/toys/blocks_candy.jpg" },
+    { id: 16, name: "Candy Dispenser Toys", price: 250, rating: 4.7, reviews: 156, description: "Fun candy dispenser toy (20g)", age: "4+ years", image: "/images/toys/dispenser.jpg" },
+    { id: 17, name: "Funbrella Umbrella Candy Toys", price: 10, rating: 4.4, reviews: 203, description: "Mini umbrella toy with candy", age: "3+ years", image: "/images/toys/funbrella_umbrella.jpg" },
+    { id: 18, name: "Fantasy Fairy Princess Candy", price: 10, rating: 4.6, reviews: 189, description: "Princess-themed candy toy", age: "3+ years", image: "/images/toys/fantasy_fairy.jpg" },
+    { id: 19, name: "Torpedo Egg Pop", price: 140, rating: 4.5, reviews: 112, description: "Egg-shaped pop candy toy", age: "4+ years", image: "/images/toys/torpedo_egg.jpg" },
+    { id: 20, name: "Cricket Ball Candy Toys", price: 20, rating: 4.3, reviews: 67, description: "Cricket ball toy with candy", age: "5+ years", image: "/images/toys/super_over.jpg" },
+    { id: 21, name: "Turbo Ventilator Mini Candy", price: 250, rating: 4.7, reviews: 145, description: "Mini fan toy with candy (5g)", age: "4+ years", image: "/images/toys/turbo_ventilator.jpg" },
   ];
 
-  // basic feature/benefit placeholders used in the UI (prevent "features"/"benefits" is not defined errors)
+  // basic feature/benefit placeholders used in the UI
   const features = [
     { title: 'Safe Materials', description: 'Non-toxic, child-safe toys', icon: Gift },
     { title: 'Free Shipping', description: 'Free delivery on orders over ₹999', icon: ShoppingCart },
@@ -423,18 +221,20 @@ const ToysShowcase = () => {
                 className="absolute top-4 right-4 z-10 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full p-2 hover:scale-110 transition-all duration-300 shadow-lg"
               >
                 <Heart 
-                  className={`h-5 w-5 transition-all duration-300 ${
-                    favorites.has(product.id) 
-                      ? "fill-red-500 text-red-500" 
-                      : "text-slate-400 hover:text-red-500"
-                  }`}
+                  className={`h-5 w-5 transition-all duration-300 ${favorites.has(product.id) ? "fill-red-500 text-red-500" : "text-slate-400 hover:text-red-500"}`}
                 />
               </button>
 
               <div className="aspect-square overflow-hidden bg-gradient-to-br from-purple-50 to-pink-50 dark:from-slate-700 dark:to-slate-600 relative">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1)_0%,_transparent_70%)]"></div>
-                <div className="w-full h-full flex items-center justify-center text-8xl group-hover:scale-110 transition-transform duration-500 relative z-10">
-                  {product.emoji}
+                <div className="w-full h-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 relative z-10">
+                  {/* Replaced emoji with product image; fallback to placeholder if image missing */}
+                  <img
+                    src={product.image || '/images/toys/placeholder.png'}
+                    alt={product.name}
+                    className="max-w-[75%] max-h-[75%] object-contain"
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/images/toys/placeholder.png'; }}
+                  />
                 </div>
               </div>
 
@@ -460,15 +260,11 @@ const ToysShowcase = () => {
                       {product.rating}
                     </span>
                   </div>
-                  <span className="text-xs text-slate-500 dark:text-slate-400">
-                    ({product.reviews} reviews)
-                  </span>
+                  <span className="text-xs text-slate-500 dark:text-slate-400">({product.reviews} reviews)</span>
                 </div>
 
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                    ₹{product.price}
-                  </span>
+                  <span className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">₹{product.price}</span>
                 </div>
               </CardContent>
 
@@ -484,9 +280,7 @@ const ToysShowcase = () => {
                     <Minus className="h-4 w-4" />
                   </Button>
                   <div className="flex-1 text-center">
-                    <span className="text-xl font-bold text-slate-900 dark:text-white">
-                      {quantities[product.id] || "1"}
-                    </span>
+                    <span className="text-xl font-bold text-slate-900 dark:text-white">{quantities[product.id] || "1"}</span>
                   </div>
                   <Button
                     variant="outline"
@@ -499,7 +293,7 @@ const ToysShowcase = () => {
                 </div>
 
                 <Button 
-                  onClick={() => contactWhatsApp(product, 1)} 
+                  onClick={() => contactWhatsApp(product, parseInt(quantities[product.id] || "1"))} 
                   className="w-full rounded-full font-semibold bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600"
                 >
                   <Phone className="mr-2 h-4 w-4" />

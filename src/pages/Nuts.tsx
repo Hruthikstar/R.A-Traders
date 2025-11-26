@@ -52,14 +52,14 @@ const nutsProducts = [
     name: "CASHEW SPICY ROASTED",
     basePrice: 160,
     description: "Spicy roasted cashew",
-    image: CashewImg,
+    image:  "/images/nuts/cashew_roasted.jpg",
   },
   {
     id: 7,
     name: "CASHEW SALT ROASTED",
     basePrice: 160,
     description: "Salt roasted cashew",
-    image: "/images/nuts/cashew_salt_roasted.png",
+    image: "/images/nuts/cashew_salt.jpg",
   },
   {
     id: 8,
@@ -94,7 +94,7 @@ const nutsProducts = [
     name: "CASHEW MIX",
     basePrice: 160,
     description: "Mixed cashew pack",
-    image: CashewImg,
+    image: "/images/nuts/cashew_mix.jpg",
   },
   {
     id: 13,
@@ -205,7 +205,7 @@ const nutsProducts = [
     name: "WALNUT CHILLIE",
     basePrice: 250,
     description: "Chilli flavored walnut",
-    image: "/images/nuts/walnut_chillie.JPG",
+    image: "/images/nuts/walnut_chillie.jpg",
   },
   {
     id: 28,

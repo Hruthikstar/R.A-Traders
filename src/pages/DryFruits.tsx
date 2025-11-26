@@ -41,11 +41,11 @@ const dryFruits: Product[] = [
   { id: 33, name: "SUGAR AMLA", basePrice: 40, description: "Sugar Amla", category: "Dry Fruits", image: "/images/dry_fruits/sugar_amla.jpg"},
   { id: 34, name: "DRY CHERRIES PSEL", basePrice: 125, description: "Dry Cherries Psel", category: "Dry Fruits", image: "/images/dry_fruits/cherries_psel.jpg" },
   // MIXED
-  { id: 35, name: "GRACE HONEY MIXED DRY FRUITS 400g", basePrice: 80, description: "Grace honey mixed dry fruits (400g)", category: "Mixed", image: "/images/dry_fruits/honey_mixed_400.jpg" },
-  { id: 36, name: "GRACE HONEY MIXED DRY FRUITS 250g", basePrice: 84, description: "Grace honey mixed dry fruits (250g)", category: "Mixed", image: "/images/dry_fruits/honey_mixed_250.jpg" },
-  { id: 37, name: "ZAZIO MIXED BERRIES", basePrice: 208, description: "Zazio mixed berries 250g", category: "Mixed", image: "/images/dry_fruits/zazio_mixed_berries.jpg" },
-  { id: 38, name: "ZAZIO MIXED NUTS", basePrice: 208, description: "Zazio mixed nuts 250g", category: "Mixed", image: "/images/dry_fruits/zazio_mixed_nuts.jpg" },
-  { id: 39, name: "DRY APRICOT POUCH", basePrice: 299, description: "Dry apricot pouch 250g", category: "Mixed", image: "/images/dry_fruits/dry_apricot_pouch.jpg" },
+  { id: 35, name: "GRACE HONEY MIXED DRY FRUITS 400g", basePrice: 80, description: "Grace honey mixed dry fruits (400g)", category: "Mixed", image: "/images/dry_fruits/grace_honey.jpg" },
+  { id: 36, name: "GRACE HONEY MIXED DRY FRUITS 250g", basePrice: 84, description: "Grace honey mixed dry fruits (250g)", category: "Mixed", image: "/images/dry_fruits/grace_honey_dryfruit.jpg" },
+  { id: 37, name: "ZAZIO MIXED BERRIES", basePrice: 208, description: "Zazio mixed berries 250g", category: "Mixed", image: "/images/dry_fruits/Zazio_Mixed_nuts.jpg" },
+  { id: 38, name: "ZAZIO MIXED NUTS", basePrice: 208, description: "Zazio mixed nuts 250g", category: "Mixed", image: "/images/dry_fruits/Zazio_Mixed.jpg" },
+  { id: 39, name: "DRY APRICOT POUCH", basePrice: 299, description: "Dry apricot pouch 250g", category: "Mixed", image: "/images/chocolate/DRY_APRICOT_POUCH.jpg" },
 ];
 
 const features = [

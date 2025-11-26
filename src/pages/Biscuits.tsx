@@ -40,7 +40,7 @@ const biscuitsProducts = [
     reviews: 198,
     description: "Refreshing lemon biscuits",
     weight: "200g",
-    image: "/images/raphotos/lemon_creams.jpg"
+    image: "/images/biscuits/munchee_milk.jpg"
   },
   { 
     id: 3, 
@@ -50,7 +50,7 @@ const biscuitsProducts = [
     reviews: 156,
     description: "Crispy cream crackers",
     weight: "200g",
-    image: "/images/raphotos/cream_cracker.jpg"
+    image: "/images/biscuits/munchee_milk75.jpg"
   },
   { 
     id: 4, 
@@ -60,7 +60,7 @@ const biscuitsProducts = [
     reviews: 203,
     description: "Classic milk biscuits",
     weight: "75g",
-    image: "/images/raphotos/cream_cracker.jpg"
+    image: "/images/biscuits/munchee_milk75.jpg"
   },
   { 
     id: 5, 
@@ -70,7 +70,7 @@ const biscuitsProducts = [
     reviews: 287,
     description: "Spicy ginger flavor",
     weight: "75g",
-    image: "/images/biscuits/muncheeginger.jpg"
+    image: "/images/biscuits/munchee_milk75_ginger.jpg"
   },
   { 
     id: 6, 
@@ -184,7 +184,7 @@ const biscuitsProducts = [
     description: "Oat cookies with chocolate chips",
     badge: "New",
     weight: "96g",
-    image: "/images/biscuits/mcoaaty.jpg"
+    image: "/images/biscuits/mcoaty_breakfast.jpg"
   },
   { 
     id: 17, 
@@ -194,7 +194,7 @@ const biscuitsProducts = [
     reviews: 142,
     description: "Oat cookies with raisins",
     weight: "96g",
-    image: "/images/biscuits/mcoaaty.jpg"
+    image: "/images/biscuits/mcoaty_breakfast_rai.jpg"
   },
   { 
     id: 18, 
@@ -204,7 +204,7 @@ const biscuitsProducts = [
     reviews: 167,
     description: "Authentic British recipe cookies",
     weight: "96g",
-    image: "/images/biscuits/gpr.jpg"
+    image: "/images/biscuits/gpr1.jpg"
   },
   { 
     id: 19, 
@@ -215,7 +215,7 @@ const biscuitsProducts = [
     description: "Traditional blueberry butter cookies",
     badge: "Premium",
     weight: "338g",
-    image: "/images/biscuits/harrodson.jpg"
+    image: "/images/biscuits/harrodson_blue.jpg"
   },
   { 
     id: 20, 
@@ -225,7 +225,7 @@ const biscuitsProducts = [
     reviews: 201,
     description: "Premium chocolate chip cookies",
     weight: "350g",
-    image: "/images/biscuits/sapphire.jpg"
+    image: "/images/biscuits/sapphire_cho.jpg"
   },
   { 
     id: 21, 
@@ -236,7 +236,7 @@ const biscuitsProducts = [
     description: "Gold collection butter cookies",
     badge: "Premium",
     weight: "350g",
-    image: "/images/biscuits/sapphirebutter.jpg"
+    image: "/images/biscuits/sapphire_gold.jpg"
   },
   { 
     id: 22, 
@@ -340,7 +340,7 @@ const biscuitsProducts = [
     description: "Assorted nuts covered in milk chocolate",
     badge: "Premium",
     weight: "175g",
-    image: "/images/biscuits/sapphire_assortment.jpg"
+    image: "/images/chocolate/sapphire_ass.jpg"
   },
   { 
     id: 32, 
@@ -350,7 +350,7 @@ const biscuitsProducts = [
     reviews: 167,
     description: "Almonds covered in premium milk chocolate",
     weight: "175g",
-    image: "/images/biscuits/sapphire_almond_175.jpg"
+    image: "/images/chocolate/SAPPHIRE_ASSORTMENT_ALMONDS__HAZELNUT_AND_RAISINS_COVERED_IN_MILK_CHOCO.jpg"
   },
   { 
     id: 33, 
@@ -361,19 +361,9 @@ const biscuitsProducts = [
     description: "Almonds covered in premium milk chocolate",
     badge: "Popular",
     weight: "350g",
-    image: "/images/biscuits/sapphire_almond_350.jpg"
+    image: "/images/chocolate/SAPPHIRE_ASSORTMENT_ALMONDS__HAZELNUT_AND_RAISINS_COVERED_IN_MILK_CHOCO.jpg"
   },
-  { 
-    id: 34, 
-    name: "NESTLE QUALITY STREET CHOCOLATES", 
-    price: 1900, 
-    rating: 4.9,
-    reviews: 287,
-    description: "Assorted premium quality street chocolates",
-    badge: "Premium",
-    weight: "900g",
-    image: "/images/biscuits/nestle_quality_street.jpg"
-  },
+  
   { 
     id: 35, 
     name: "SAPPHIRE ALMOND COVERED IN MILK CHOCO 90G", 
@@ -382,7 +372,7 @@ const biscuitsProducts = [
     reviews: 134,
     description: "Almonds covered in milk chocolate",
     weight: "90g",
-    image: "/images/biscuits/sapphire_almond_90.jpg"
+    image: "/images/chocolate/SAPPHIRE_ALMOND_COVERED_WITH_MILK_CHOCO_HEART_SHAPED.jpg"
   },
   { 
     id: 36, 
@@ -414,7 +404,7 @@ const biscuitsProducts = [
     description: "Oat cookies with chocolate chips",
     badge: "New",
     weight: "96g",
-    image: "/images/biscuits/mcoaaty.jpg"
+    image: "/images/biscuits/mcoaty_breakfast.jpg"
   },
   { 
     id: 39, 
@@ -424,7 +414,7 @@ const biscuitsProducts = [
     reviews: 142,
     description: "Oat cookies with raisins",
     weight: "96g",
-    image: "/images/biscuits/mcoaaty.jpg"
+    image: "/images/biscuits/mcoaty_breakfast_rai.jpg"
   },
   { 
     id: 40, 
@@ -434,7 +424,7 @@ const biscuitsProducts = [
     reviews: 167,
     description: "Authentic British recipe cookies",
     weight: "96g",
-    image: "/images/biscuits/gpr.jpg"
+    image: "/images/biscuits/gpr1.jpg"
   },
   { 
     id: 41, 
@@ -445,7 +435,7 @@ const biscuitsProducts = [
     description: "Traditional blueberry butter cookies",
     badge: "Premium",
     weight: "338g",
-    image: "/images/biscuits/harrodson.jpg"
+    image: "/images/biscuits/harrodson_blue.jpg"
   },
   { 
     id: 42, 
@@ -455,7 +445,7 @@ const biscuitsProducts = [
     reviews: 201,
     description: "Premium chocolate chip cookies",
     weight: "350g",
-    image: "/images/biscuits/sapphire.jpg"
+    image: "/images/chocolate/SAPPHIRE_BUTTER_COOKIES_SILVER_COLLECTION.jpg"
   },
   { 
     id: 43, 
@@ -487,7 +477,7 @@ const biscuitsProducts = [
     description: "Heart shaped almonds in milk chocolate",
     badge: "Popular",
     weight: "160g",
-    image: "/images/biscuits/sapphire_heart.jpg"
+    image: "/images/chocolate/SAPPHIRE_ASSORTMENT_ALMONDS__HAZELNUT_AND_RAISINS_COVERED_IN_MILK_CHOCO.jpg"
   },
   { 
     id: 46, 
@@ -520,6 +510,157 @@ const biscuitsProducts = [
     badge: "Premium",
     weight: "750g",
     image: "/images/biscuits/danisa750.jpg"
+  },
+  { 
+    id: 48, 
+    name: "DANISA BUTTER COOKIES 750G", 
+    price: 1999, 
+    rating: 4.9,
+    reviews: 189,
+    description: "Traditional Danish butter cookies",
+    badge: "Premium",
+    weight: "750g",
+    image: "/images/biscuits/danisa750.jpg"
+  },
+   { 
+    id: 49, 
+    name: "ASTOR WAFER STICK COKELAT MORE CHOCOLATE ", 
+    price: 899, 
+    
+    description: "Traditional Danish butter cookies",
+    badge: "Premium",
+    weight: "330g",
+    image: "/images/biscuits/astro_wafer.jpg"
+  },
+  { 
+    id: 50, 
+    name: "TWISTER STRAWBERRY ", 
+    price: 300, 
+    
+    description: "Traditional Danish butter cookies",
+    badge: "Premium",
+    weight: "320g",
+    image: "/images/biscuits/twister_straw.jpg"
+  },
+  { 
+    id: 51, 
+    name: "TWISTER CHOCO ", 
+    price: 300, 
+    badge: "Premium",
+    weight: "320g",
+    image: "/images/biscuits/twister_choco.jpg"
+  },
+  { 
+    id: 52, 
+    name: "TWISTER CAPPUCCINO ", 
+    price: 300, 
+    badge: "Premium",
+    weight: "320g",
+    image: "/images/biscuits/twister_cappu.jpg"
+  },
+{ 
+    id: 53, 
+    name: "TWISTER VANNILA ", 
+    price: 300, 
+    badge: "Premium",
+    weight: "320g",
+    image: "/images/biscuits/twister_vanilla.jpg"
+  },
+  { 
+    id: 54, 
+    name: "TWISTER BLACK ", 
+    price: 300, 
+    badge: "Premium",
+    weight: "320g",
+    image: "/images/biscuits/twister_black.jpg"
+  },
+   { 
+    id: 55, 
+    name: "QUADRATINI LOACKER VANNILA WAFFERS ", 
+    price: 299, 
+    badge: "Premium",
+    weight: "125g",
+    image: "/images/biscuits/quadratini_Loacker_van.jpg"
+  },
+  { 
+    id: 56, 
+    name: "QUADRATINI LOACKER COCOA AND MILK WAFFERS ", 
+    price: 299, 
+    badge: "Premium",
+    weight: "125g",
+    image: "/images/biscuits/quadratini_Loacker_cocoa.jpg"
+  },
+{ 
+    id: 57, 
+    name: "QUADRATINI LOACKER BLUEBERRY WAFFERS ", 
+    price: 299, 
+    badge: "Premium",
+    weight: "125g",
+    image: "/images/biscuits/quadratini_Loacker_blue.jpg"
+  },
+{ 
+    id: 58, 
+    name: "QUADRATINI LOACKER NAPOLITANER WAFFERS ", 
+    price: 299, 
+    badge: "Premium",
+    weight: "125g",
+    image: "/images/biscuits/quadratini_Loacker_napolitaner.jpg"
+  },
+  { 
+    id: 59, 
+    name: "QUADRATINI LOACKER DARK CHOCOLATE WAFFERS ", 
+    price: 299, 
+    badge: "Premium",
+    weight: "125g",
+    image: "/images/biscuits/quadratini_Loacker_dark.jpg"
+  },
+{ 
+    id: 60, 
+    name: "QUADRATINI LOACKER ESPRESSO WAFFERS ", 
+    price: 299, 
+    badge: "Premium",
+    weight: "125g",
+    image: "/images/biscuits/quadratini_Loacker_espresso.jpg"
+  },
+  { 
+    id: 61, 
+    name: "QUADRATINI LOACKER DOUBLE CHOCOLATE WAFFERS ", 
+    price: 299, 
+    badge: "Premium",
+    weight: "125g",
+    image: "/images/biscuits/quadratini_Loacker_double.jpg"
+  },
+  { 
+    id: 62, 
+    name: "QUADRATINI LOACKER CAPPUCCIONO WAFFERS ", 
+    price: 299, 
+    badge: "Premium",
+    weight: "125g",
+    image: "/images/biscuits/quadratini_Loacker_cappu.jpg"
+  },
+  { 
+    id: 63, 
+    name: "QUADRATINI LOACKER TIRAMISU WAFFERS ", 
+    price: 480, 
+    badge: "Premium",
+    weight: "220g",
+    image: "/images/biscuits/quadratini_Loacker_tiramisu.jpg"
+  },
+  { 
+    id: 64, 
+    name: "QUADRATINI LOACKER BLUEBERRY-YOGURT WAFFERS ", 
+    price: 480, 
+    badge: "Premium",
+    weight: "220g",
+    image: "/images/biscuits/quadratini_Loacker_blue.jpg"
+  },
+  { 
+    id: 65, 
+    name: "QUADRATINI LOACKER CHOCOLATE WAFFERS ", 
+    price: 499, 
+    badge: "Premium",
+    weight: "250g",
+    image: "/images/biscuits/quadratini_Loacker_choco.jpg"
   },
 ];
 

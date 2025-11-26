@@ -14,20 +14,145 @@ type ChipProduct = {
   image?: string;
 };
 
-// chips product list: basePrice is price per unit now (was per 100g)
-// use public image paths (place images in public/images/chips/) or change to imports
+// chips product list: basePrice is price per unit (PCS RATE in the sheet)
+// Images use the external URLs provided by the client where available
 const chipsProducts: ChipProduct[] = [
-  { id: 1, name: "LAY'S CLASSIC", basePrice: 35, description: "Classic salted potato chips", image: "/images/chips/plainsalt.jpg" },
-  { id: 2, name: "CHEESE BALLS", basePrice: 40, description: "Cheesy crunchy bites", image: "/images/chips/cheeseballs.jpg" },
-  { id: 3, name: "KETTLE SALT", basePrice: 45, description: "Kettle cooked salt chips", image: "/images/chips/kettlesalt.jpg" },
-  { id: 4, name: "SWEET CHILLI", basePrice: 38, description: "Sweet chilli flavored chips", image: "/images/chips/sweetchilli.jpg" },
-  { id: 5, name: "BBQ", basePrice: 40, description: "Barbecue flavored chips", image: "/images/chips/bbq.jpg" },
-  { id: 6, name: "SOUR CREAM & ONION", basePrice: 42, description: "Sour cream & onion", image: "/images/chips/sourcream.jpg" },
-  { id: 7, name: "PERI PERI", basePrice: 44, description: "Peri peri spicy chips", image: "/images/chips/periperi.jpg" },
-  { id: 8, name: "MEXICAN", basePrice: 39, description: "Mexican spicy mix", image: "/images/chips/mexican.jpg" },
-  { id: 9, name: "MASALA", basePrice: 36, description: "Indian masala chips", image:"/images/chips/masalachips.jpg" },
-  { id: 10, name: "PLAIN SALT", basePrice: 30, description: "Plain salted chips", image: "/images/chips/plainsalt.jpg" },
-  { id: 11, name: "OMAN CHIPS", basePrice: 35, description: "OMAN chips", image: "/images/omanchip.jpg" },
+  {
+    id: 1,
+    name: "TIFFANY FINNS SALT AND VINEGAR",
+    basePrice: 200,
+    description: "Tiffany Finns salt & vinegar potato chips (85g)",
+    image: "/images/chips/finns_salt.jpg",
+  },
+  {
+    id: 2,
+    name: "TIFFANY FINNS LOUISIANA CHILLI",
+    basePrice: 200,
+    description: "Tiffany Finns Louisiana chilli potato chips (85g)",
+    image: "/images/chips/finns_chille.jpg",
+  },
+  {
+    id: 3,
+    name: "PRINGLES TANGY TOMATO TWIST",
+    basePrice: 120,
+    description: "Pringles tangy tomato flavour crisps (102g)",
+    image: "/images/chips/pringles_tangy.jpg",
+  },
+  {
+    id: 4,
+    name: "PRINGLES PIZZA",
+    basePrice: 120,
+    description: "Pringles pizza flavour crisps (102g)",
+    image: "/images/chips/pringles_pizza.jpg",
+  },
+  {
+    id: 5,
+    name: "PRINGLES SOUTH AFRICAN STYLE PERI PERI",
+    basePrice: 120,
+    description: "Pringles South African style peri peri flavour (102g)",
+    image: "/images/chips/pringles_south.jpg",
+  },
+  {
+    id: 6,
+    name: "PRINGLES SALT AND VINEGAR",
+    basePrice: 249,
+    description: "Pringles salt & vinegar flavour (165g)",
+    image: "/images/chips/pringles_salt.jpg",
+  },
+  {
+    id: 7,
+    name: "CHIPS OMAN POTATO CHIPS CHILLI FLAVOUR (15g)",
+    basePrice: 35,
+    description: "Chips Oman chilli flavour (15g sachet)",
+    image: "/images/chips/oman.jpg",
+  },
+  {
+    id: 8,
+    name: "CHIPS OMAN POTATO CHIPS CHILLI FLAVOUR (50g)",
+    basePrice: 190,
+    description: "Chips Oman chilli flavour family pack (50g)",
+    image: "/images/chips/oman1.jpg",
+  },
+  {
+    id: 9,
+    name: "CHIPS OMAN POTATO CHIPS CHILLI FLAVOUR TIN",
+    basePrice: 130,
+    description: "Chips Oman chilli flavour in tin (37g)",
+    image: "/images/chips/oman.jpg",
+  },
+  {
+    id: 10,
+    name: "SOHAR CHIPS",
+    basePrice: 25,
+    description: "Sohar chips (15g)",
+    image: "/images/chips/sohar.jpg",
+  },
+  {
+    id: 11,
+    name: "SALAD CHIPS",
+    basePrice: 25,
+    description: "Salad chips (15g)",
+    image: "/images/chips/salad.jpg",
+  },
+  {
+    id: 12,
+    name: "TIFFANY BUGLES CHIPS",
+    basePrice: 25,
+    description: "Tiffany Bugles crunchy corn snack chilli (10.5g)",
+    image:
+      "/images/chips/bugles.jpg",
+  },
+  {
+    id: 13,
+    name: "ORIENTAL SUPER RING CHEESE FLAVOUR (60g)",
+    basePrice: 100,
+    description: "Oriental Super Ring cheese flavoured corn snack (60g)",
+    image:"/images/chips/ring.jpg",
+  },
+  {
+    id: 14,
+    name: "ORIENTAL CHEESE BALLS CHEESE FLAVOUR (60g)",
+    basePrice: 100,
+    description: "Oriental cheese balls cheese flavour (60g)",
+    image:
+      "/images/chips/cheese.jpg",
+  },
+  {
+    id: 15,
+    name: "MIAOW MIAOW CHEESE BALLS",
+    basePrice: 85,
+    description: "Miaow Miaow cheese flavoured balls (60g)",
+    image: "/images/chips/miaow.jpg",
+  },
+  {
+    id: 16,
+    name: "MIAOW MIAOW ONION FLAVOURED RINGS",
+    basePrice: 85,
+    description: "Miaow Miaow onion flavoured rings (60g)",
+    image: "/images/chips/miaow_oni.jpg",
+  },
+  {
+    id: 17,
+    name: "POFAK OMAN CHIPS",
+    basePrice: 25,
+    description: "Pofak Oman chips (12g)",
+    image: "/images/chips/pofak.jpg",
+  },
+  {
+    id: 18,
+    name: "QATAR PAFKI CRISPY CORN BALLS CHEESE FLAVOUR",
+    basePrice: 25,
+    description: "Qatar Pafki crispy corn balls cheese flavour (12g)",
+    image: "https://rawabihypermarket.com/uploads/product_images/featured_image/304787.jpg",
+  },
+  {
+    id: 19,
+    name: "QATAR PAFKI CRISPY CORN BALLS CHEDDAR & JALAPENO",
+    basePrice: 25,
+    description: "Qatar Pafki crispy corn balls cheddar & jalapeno flavour (15g)",
+    image:
+      "https://www.unioncoop.ae/media/catalog/product/m/i/minijalaf_348436_8223_1.png",
+  },
 ];
 
 const features = [

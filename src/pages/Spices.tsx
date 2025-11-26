@@ -19,7 +19,7 @@ const spicesProducts: Product[] = [
     name: "CARDAMOM",
     basePrice: 600,
     description: "Premium green cardamom pods",
-    image: undefined,
+    image:  "/images/spices/cardam.jpg",
   },
   {
     id: 2,

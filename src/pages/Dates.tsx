@@ -27,7 +27,7 @@ const datesProducts: Product[] = [
     name: "AJWA PSEL",
     basePrice: 200,
     description: "Ajwa PSEL dates",
-    image: "/images/dates/ajwa_psel.jpg",
+    image: "/images/dates/Ajwa_psel.jpg",
   },
   {
     id: 3,

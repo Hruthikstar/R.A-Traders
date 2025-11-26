@@ -1,40 +1,22 @@
 import { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Droplet, Phone, Heart, Star, Leaf, Truck, Shield, Award, ChevronRight, Flame, Apple, Sparkles } from "lucide-react";
+import { Droplet, Phone, Heart, Star, Leaf, Truck, Shield, Award, ChevronRight, Flame, Apple, Sparkles, Plus, Minus } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 interface Product {
   id: number;
   name: string;
-  basePrice: number; // price per 100g approx
+  basePrice: number; // price per unit (pack shown in name)
   description: string;
   image?: string;
 }
 
 const dateSyrupProducts: Product[] = [
-  {
-    id: 1,
-    name: "DATES SYRUP VIP ARAB 1kg",
-    basePrice: 100,
-    description: "VIP Arab premium date syrup 1kg",
-    image: undefined,
-  },
-  {
-    id: 2,
-    name: "ZAZIO DATE SYRUP 500g",
-    basePrice: 80,
-    description: "Zazio all natural date syrup 500g",
-    image: "/images/dateSyrup/zazio_500g.jpg",
-  },
-  {
-    id: 3,
-    name: "ALL NATURAL DATE SYRUP 400g",
-    basePrice: 62,
-    description: "All natural date syrup 400g",
-    image: "/images/dateSyrup/all_natural_400g.jpg",
-  },
+  { id: 1, name: "DATES SYRUP VIP ARAB 1kg", basePrice: 100, description: "VIP Arab premium date syrup 1kg", image: "/images/dateSyrup/dates_syrup.jpg" },
+  { id: 2, name: "ZAZIO DATE SYRUP 500g", basePrice: 80, description: "Zazio all natural date syrup 500g", image: "/images/dateSyrup/zazio_500g.jpg" },
+  { id: 3, name: "ALL NATURAL DATE SYRUP 400g", basePrice: 62, description: "All natural date syrup 400g", image: "/images/dateSyrup/all_natural_400g.jpg" },
 ];
 
 const features = [
@@ -51,37 +33,44 @@ const healthBenefits = [
 ];
 
 const DateSyrup = () => {
-  const [selectedGrams, setSelectedGrams] = useState<Record<number, number>>({});
+  // mirror Perfume pattern: store quantity as string so UI shows exact value and we can use +/-
+  const [selectedQuantity, setSelectedQuantity] = useState<Record<number, string>>({});
   const [favorites, setFavorites] = useState<Set<number>>(new Set());
 
   const toggleFavorite = (productId: number) => {
     setFavorites((prev) => {
       const newFavorites = new Set(prev);
-      if (newFavorites.has(productId)) {
-        newFavorites.delete(productId);
-      } else {
-        newFavorites.add(productId);
-      }
+      if (newFavorites.has(productId)) newFavorites.delete(productId);
+      else newFavorites.add(productId);
       return newFavorites;
     });
   };
 
-  const setGramsFor = (productId: number, grams: number) => {
-    setSelectedGrams((prev) => ({ ...prev, [productId]: grams }));
+  const incrementQuantity = (productId: number) => {
+    const current = parseInt(selectedQuantity[productId] || "1", 10);
+    if (current < 50) {
+      setSelectedQuantity((prev) => ({ ...prev, [productId]: String(current + 1) }));
+    }
   };
 
-  const getPrice = (product: Product, grams?: number) => {
-    const g = grams || 100;
-    const raw = product.basePrice * (g / 100);
-    return Math.round(raw);
+  const decrementQuantity = (productId: number) => {
+    const current = parseInt(selectedQuantity[productId] || "1", 10);
+    if (current > 1) {
+      setSelectedQuantity((prev) => ({ ...prev, [productId]: String(current - 1) }));
+    }
+  };
+
+  const getPrice = (product: Product, quantity?: string | number) => {
+    const qty = typeof quantity === "string" ? parseInt(quantity || "1", 10) : (quantity || 1);
+    return product.basePrice * qty;
   };
 
   const contactWhatsApp = (productId: number) => {
     const product = dateSyrupProducts.find((p) => p.id === productId);
     if (!product) return;
-    const grams = selectedGrams[productId] || 100;
-    const price = getPrice(product, grams);
-    const msg = `Hello, I'm interested in ${product.name} - approx ${grams}g (Total: ₹${price}). Please assist with ordering.`;
+    const quantity = parseInt(selectedQuantity[productId] || "1", 10);
+    const price = getPrice(product, quantity);
+    const msg = `Hello, I'm interested in ${product.name} - Quantity: ${quantity} (Total: ₹${price}). Please assist with ordering.`;
     const url = `https://wa.me/918888095594?text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank");
   };
@@ -186,7 +175,7 @@ const DateSyrup = () => {
         </div>
       </section>
 
-      {/* Products Gallery */}
+      {/* Products Gallery (quantity preview like Perfume) */}
       <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-900 to-orange-900 dark:from-amber-400 dark:to-orange-400 bg-clip-text text-transparent">
@@ -196,7 +185,7 @@ const DateSyrup = () => {
             Handpicked and quality-tested date syrup sourced from the finest dates
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {dateSyrupProducts.map((product) => (
             <Card
@@ -209,11 +198,7 @@ const DateSyrup = () => {
                 className="absolute top-4 right-4 z-10 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full p-2 hover:scale-110 transition-all duration-300 shadow-lg"
               >
                 <Heart 
-                  className={`h-5 w-5 transition-all duration-300 ${
-                    favorites.has(product.id) 
-                      ? "fill-red-500 text-red-500" 
-                      : "text-slate-400 hover:text-red-500"
-                  }`}
+                  className={`h-5 w-5 transition-all duration-300 ${favorites.has(product.id) ? "fill-red-500 text-red-500" : "text-slate-400 hover:text-red-500"}`}
                 />
               </button>
 
@@ -221,11 +206,7 @@ const DateSyrup = () => {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1)_0%,_transparent_70%)]"></div>
                 <div className="w-full h-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 relative z-10">
                   {product.image ? (
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="max-w-[75%] max-h-[75%] object-contain"
-                    />
+                    <img src={product.image} alt={product.name} className="max-w-[75%] max-h-[75%] object-contain" />
                   ) : (
                     <div className="text-8xl">🍯</div>
                   )}
@@ -238,45 +219,41 @@ const DateSyrup = () => {
                     <h3 className="font-bold text-lg mb-1 text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
                       {product.name}
                     </h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">
-                      {product.description}
-                    </p>
-                    <span className="inline-block bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-semibold px-2 py-1 rounded-full">
-                      Select size below
-                    </span>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">{product.description}</p>
+                    <span className="inline-block bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-semibold px-2 py-1 rounded-full">Select quantity below</span>
                   </div>
                 </div>
 
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
-                    ₹{getPrice(product, selectedGrams[product.id] || 100)}
-                  </span>
-                  <span className="text-sm text-slate-500 dark:text-slate-400">
-                    /{(selectedGrams[product.id] || 100) >= 1000
-                      ? `${(selectedGrams[product.id] || 100) / 1000}kg`
-                      : `${selectedGrams[product.id] || 100}g`}
-                  </span>
+                  <span className="text-3xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">₹{getPrice(product, selectedQuantity[product.id] || 1)}</span>
+                  <span className="text-sm text-slate-500 dark:text-slate-400">/unit</span>
                 </div>
               </CardContent>
 
               <CardFooter className="p-5 pt-0 flex flex-col gap-3">
-                {/* Gram size selector */}
-                <div className="flex items-center gap-2 w-full flex-wrap">
-                  {[100, 200, 250, 500, 1000].map((g) => {
-                    const isSelected = (selectedGrams[product.id] || 100) === g;
-                    return (
-                      <Button
-                        key={g}
-                        variant={isSelected ? undefined : "outline"}
-                        onClick={() => setGramsFor(product.id, g)}
-                        className={`h-10 px-3 rounded-full text-sm font-semibold ${
-                          isSelected ? "bg-amber-600 text-white" : ""
-                        }`}
-                      >
-                        {g >= 1000 ? `${g / 1000}kg` : `${g}g`}
-                      </Button>
-                    );
-                  })}
+                {/* Quantity Selector with +/- like Perfume */}
+                <div className="flex items-center gap-2 w-full">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={() => decrementQuantity(product.id)}
+                    className="h-10 w-10 rounded-full hover:bg-amber-50 dark:hover:bg-amber-900/20 border-2"
+                  >
+                    <Minus className="h-4 w-4" />
+                  </Button>
+
+                  <div className="flex-1 text-center">
+                    <span className="text-xl font-bold text-slate-900 dark:text-white">{selectedQuantity[product.id] || 1}</span>
+                  </div>
+
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={() => incrementQuantity(product.id)}
+                    className="h-10 w-10 rounded-full hover:bg-amber-50 dark:hover:bg-amber-900/20 border-2"
+                  >
+                    <Plus className="h-4 w-4" />
+                  </Button>
                 </div>
 
                 <Button
@@ -299,18 +276,9 @@ const DateSyrup = () => {
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjEiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
             <div className="relative z-10">
               <Droplet className="h-16 w-16 mx-auto mb-4 text-amber-100" />
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                Sweeten Your Life Naturally
-              </h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Subscribe to our monthly date syrup box and get fresh, premium syrup delivered to your doorstep
-              </p>
-              <Button 
-                size="lg"
-                className="bg-white text-amber-900 hover:bg-amber-50 shadow-xl rounded-full px-8 text-lg font-semibold"
-              >
-                Subscribe & Save 20%
-              </Button>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Sweeten Your Life Naturally</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Subscribe to our monthly date syrup box and get fresh, premium syrup delivered to your doorstep</p>
+              <Button size="lg" className="bg-white text-amber-900 hover:bg-amber-50 shadow-xl rounded-full px-8 text-lg font-semibold">Subscribe & Save 20%</Button>
             </div>
           </div>
         </div>
