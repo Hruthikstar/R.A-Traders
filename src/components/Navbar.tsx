@@ -15,9 +15,9 @@ const products = [
   { id: 8, name: "Chips", icon: "🍟", path: "/chips" },
   { id: 9, name: "Spices", icon: "🌶️", path: "/spices" },
   { id: 10, name: "Honey", icon: "🍯", path: "/honey" },
-  { id: 11, name: "Date Syrup", icon: "🥞", path: "/date-syrup" },
+  { id: 11, name: "Date Syrup", icon: "🥞", path: "/datesyrup" },
   { id: 12, name: "Juices", icon: "🥤", path: "/juices" },
-];
+]; 
 
 interface NavLink {
   label: string;

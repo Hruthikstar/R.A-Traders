@@ -47,7 +47,7 @@ const App = () => (
             <Route path="/datesyrup" element={<DateSyrup />} />
             <Route path="/juices" element={<Juices />} />
 
-            {/* New route */}
+            {/* New route */} 
             
 
             <Route path="*" element={<NotFound />} />
