@@ -17,14 +17,12 @@ const categories = [
   { id: 4, name: "Perfumes", image: perfumeImg, description: "Luxury fragrances for everyone", path: "/perfumes" },
   { id: 5, name: "Dates", image: datesImg, description: "Fresh and premium quality dates", path: "/dates" },
   { id: 6, name: "Toys", image: "/images/toy.jpg", description: "Fun toys for children of all ages", path: "/toys" },
- { id: 7, name: "Chips", image: "/images/chips.jpg", description: "Healthy Healthy", path: "/chips" },
-  { id: 7, name: "juice", image: "/images/juice.jpg", description: "Healthy Healthy", path: "/juices" },
-   { id: 7, name: "Date syrup", image: "/images/datesyrup.jpg", description: "Healthy Healthy", path: "/datesyrup" },
-    { id: 7, name: "Honey", image: "/images/honey.jpg", description: "Healthy Healthy", path: "/honey" },
- { id: 7, name: "Spices", image: "/images/spices.jpg", description: "Healthy Healthy", path: "/spices" },
-
-
-
+  { id: 7, name: "Chips", image: "/images/chips.jpg", description: "Crispy and delicious snacks", path: "/chips" },
+  { id: 8, name: "Juices", image: "/images/juice.jpg", description: "Fresh and refreshing beverages", path: "/juices" },
+  { id: 9, name: "Date Syrup", image: "/images/datesyrup.jpg", description: "Pure natural sweetness", path: "/datesyrup" },
+  { id: 10, name: "Honey", image: "/images/honey.jpg", description: "Organic and pure honey", path: "/honey" },
+  { id: 11, name: "Spices", image: "/images/spices.jpg", description: "Aromatic spices for your kitchen", path: "/spices" },
+  { id: 12, name: "Dry Fruits", image: "/src/assets/dry.png", description: "Nutritious and delicious dry fruits", path: "/dry-fruits" },
 ];
 
 const Categories = () => {
